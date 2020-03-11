@@ -48,13 +48,31 @@ class Person
   
 
     def get_paid(amount)
-        @bank_account = self.bank_account+= amount
-        @bank_account
-       
-    
+        self.bank_account +=  amount
+        "all about the benjamins"
+    end
+
+    def take_bath
+        self.hygiene +=  4 
+        "♪ Rub-a-dub just relaxing in the tub ♫" 
+
     end
     
+    def work_out
+        self.hygiene -=  3 
+        self.happiness += 2
+        "♪ another one bites the dust ♫"
+    end
+
+
+
+
+
+    def call_friend (friend)
+        friend.happiness 
+    end
 
 
 
 end
+# bob = Person.new 
