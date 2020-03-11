@@ -1,7 +1,8 @@
 # your code goes here
 require 'pry'
 class Person
-    attr_reader :name
+    attr_reader :name, :happiness, :hygiene
+    attr_accessor :bank_account
     
 
     def initialize(name)
@@ -9,18 +10,6 @@ class Person
         @bank_account = 25
         @happiness = 8
         @hygiene = 8
-    end
-
-    def bank_account
-        @bank_account
-    end
-
-    def bank_account=(num)
-        @bank_account += num
-    end
-
-    def happiness
-        @happiness
     end
 
     def happiness= (index)
@@ -31,10 +20,6 @@ class Person
         else 
             @happiness = index
         end
-    end
-
-    def hygiene
-        @hygiene
     end
 
     def hygiene=(index)
