@@ -1,3 +1,4 @@
+require "pry"
 class Person
 attr_reader :name, :happiness, :hygiene
 attr_accessor :bank_account
@@ -19,9 +20,10 @@ attr_accessor :bank_account
     end
 
     def hygiene=(index)
-        if index > 10
+        @hygiene = index
+        if @hygiene > 10
             @hygiene = 10
-        elsif index < 0
+        elsif @hygiene < 0
             @hygiene = 0
         else
             @hygiene = index
@@ -44,11 +46,29 @@ attr_accessor :bank_account
     end
 
     def take_bath
-        @hygiene += 4
+        self.hygiene += 4 #works by magic 
+        # @hygiene += 4
+        # @hygiene = 10 if @hygiene > 10
+        # binding.pry
+        "♪ Rub-a-dub just relaxing in the tub ♫"
     end
 
+    def work_out
+        self.hygiene -= 3
+        self.happiness += 2
+        "♪ another one bites the dust ♫"
+    end
+
+    def call_friend(friend)
+        friend.happiness +=3 #magic 
+        self.happiness +=3 
+        "Hi #{friend.name}! It's #{self.name}. How are you?"
+    end
+
+    
   end
 
+   
 
 
 
