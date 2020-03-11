@@ -1,6 +1,6 @@
 class Person
 
-    attr_accessor :bank_account
+    attr_accessor :bank_account, :name_hash, :people 
     attr_reader :name
 
     def initialize(name)

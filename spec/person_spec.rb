@@ -1,4 +1,4 @@
- m RSpec.describe 'Person' do
+ RSpec.describe 'Person' do
   let(:stella) { Person.new('Stella') }
   let(:blanche) { Person.new('Blanche') }
   let(:people) { [stella, blanche] }
