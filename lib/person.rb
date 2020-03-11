@@ -36,6 +36,7 @@ class Person
         else
             return false
         end
+    end
 
     def clean?
         if self.hygiene > 7
